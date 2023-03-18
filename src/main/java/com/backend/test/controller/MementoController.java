@@ -9,7 +9,7 @@ import java.util.*;
 @RequestMapping("/api-test")
 public class MementoController {
 
-    private List<String> listNames = Arrays.asList("Hola mundo");
+    private List<String> listNames = new ArrayList<>();
 
     @GetMapping("/hola-mundo")
     public String getMundo(){
