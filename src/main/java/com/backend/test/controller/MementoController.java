@@ -21,6 +21,7 @@ public class MementoController {
         if(this.listNames.isEmpty()){
             Map<String,String> mapResponse = new HashMap<>();
             mapResponse.put("mensaje","no tiene elementos");
+            return ResponseEntity.ok(mapResponse);
         }
         return ResponseEntity.ok(this.listNames);
     }
