@@ -11,9 +11,9 @@ public class MementoController {
 
     private List<String> listNames = new ArrayList<>();
 
-    @GetMapping("/hola-mundo")
-    public String getMundo(){
-        return "Hola mundo";
+    @GetMapping("/clear-list")
+    public void getMundo(){
+        listNames.clear();
     }
 
     @GetMapping("/names")
