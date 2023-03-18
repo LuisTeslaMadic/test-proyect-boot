@@ -17,8 +17,12 @@ public class MementoController {
     }
 
     @GetMapping("/names")
-    public List<String> getNamesAdd(){
-        return listNames;
+    public ResponseEntity<?> getNamesAdd(){
+        if(this.listNames.isEmpty()){
+            Map<String,String> mapResponse = new HashMap<>();
+            mapResponse.put("mensaje","no tiene elementos");
+        }
+        return ResponseEntity.ok(this.listNames);
     }
 
     @PostMapping("/name-add")
